@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Legal Bot</title>
+</head>
+<body>
+    <h1>Ask Your Legal Rights Question</h1>
+    <form id="questionForm">
+        <input type="text" name="question" id="question" placeholder="Enter your question" required>
+        <button type="submit">Ask</button>
+    </form>
+    <p id="answer"></p>
+
+    <script>
+        document.getElementById('questionForm').addEventListener('submit', async function(e) {
+            // async function is used for waiting on server responses
+            e.preventDefault(); // stops the page from refreshing
+            const question = document.getElementById('question').value;
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: new URLSearchParams({'question': question})
+            });
+            const data = await response.json();
+            document.getElementById('answer').textContent = data.answer;
+        });
+    </script>
+</body>
+</html>
