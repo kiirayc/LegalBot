@@ -1,4 +1,5 @@
 import json
+from fuzzywuzzy import process
 from flask import Flask, request, render_template, jsonify
 
 app = Flask(__name__)
@@ -14,7 +15,15 @@ def home():
 @app.route('/ask', methods=['POST'])
 def ask():
     question = request.form.get('question', '').strip()
-    answer = LEGAL_QA.get(question, "Sorry, I don't have an answer for that.")
+    normalized_question = question.strip().lower()
+
+    best_mathch, score = process.extractOne(normalized_question, LEGAL_QA.keys())
+
+    if score > 90:
+        answer = LEGAL_QA[best_mathch]
+    else:
+        answer = "Sorry, I don't have an answer for that."
+
     return jsonify({'answer': answer})
 
 if __name__ == '__main__':
