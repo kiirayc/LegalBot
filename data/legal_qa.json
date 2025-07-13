@@ -3,7 +3,9 @@
     "Stay calm. If you need to reach for something (like ID), tell the officer first. ",
     "what if i am pulled over in a traffic stop?":
     "Ask, 'Are you from the police or immigration (ICE/CBP)?'. Immigration officers sometimes say they are police, but they are not.",
-    "what if i am a u.s. citizen or have legal status?":
+    "what if i am a u.s. citizen":
+    "Show your documents (passport, green card, work permit, etc.).",
+    "what if i have legal status?":
     "Show your documents (passport, green card, work permit, etc.).",
     "what if i am undocumented?":
     "You have the right to remain silent. You do not have to answer questions about your immigration status. Anything you say can be used against you in court.",
