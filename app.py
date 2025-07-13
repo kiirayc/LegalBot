@@ -14,7 +14,8 @@ SYNONYMS = {
     "immigration": ["ice", "border patrol"],
     "stopped": ["pulled over", "detained", "held up"],
     "document": ["papers", "id", "identification"],
-    "rights": ["legal rights", "protections"]
+    "rights": ["legal rights", "protections"],
+    "citizen": ["citizenship"]
 }
 
 def apply_synonyms(text):
