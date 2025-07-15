@@ -12,5 +12,33 @@
     "what if an immigration officer knocks on my door?":
     "Do not open the door. Teach your children not to open it. Officers need a real warrant (signed by a judge) to enter. ICE 'warrants' are not signed by judges—they do not give permission to enter without your consent.",
     "what if i see immigration officers outside?":
-    "Go inside to a safe place. If you are a U.S. citizen and feel safe, you can record what is happening."
+    "Go inside to a safe place. If you are a U.S. citizen and feel safe, you can record what is happening.",
+    "what if i am detained by immigration officers?":  
+    "You have the right to remain silent. Do not sign anything without speaking to a lawyer first. Ask for a list of free or low-cost legal services. You have the right to call your consulate.",
+    "what if i am asked about my immigration status at an airport?":  
+    "You do not have to answer questions about your status. If you are a lawful permanent resident (green card holder), you must show your card. If you are a non-citizen visa holder, you may be asked for your passport and visa.",
+    "can i refuse a search of my car or belongings by police or immigration?":  
+    "Yes, you can say, 'I do not consent to a search.' However, if they have probable cause or a warrant, they may search without your permission.",
+    "what if i am arrested by ice?":  
+    "Do not resist, but do not answer questions about your birthplace or immigration status. Ask to speak to a lawyer immediately. You have the right to a hearing before an immigration judge.",
+    "what if police or immigration ask for my phone or social media passwords?":  
+    "You have the right to refuse. Do not unlock your phone or provide passwords without a warrant. If forced, clearly state, 'I do not consent.'",
+    "what if i am stopped at a border checkpoint inside the u.s.?":  
+    "Border Patrol can ask about immigration status within 100 miles of the border. You have the right to remain silent if you are not a U.S. citizen, but refusing to answer may lead to further detention.",
+    "what if i am a daca recipient and stopped by ice?":  
+    "Show your DACA approval notice and work permit if you have them. You have the right to remain silent and request a lawyer. DACA does not guarantee protection from deportation.",
+    "what if i am a victim of a crime but afraid to report it due to my immigration status?":  
+    "You may qualify for a U visa if you help law enforcement. Many police departments do not ask about immigration status when taking crime reports. However, take caution.",
+    "what if i am given immigration paperwork i don’t understand?":  
+    "Do not sign anything. Ask for an interpreter and a lawyer. Many organizations provide free legal help for immigrants.",
+    "what if i am in deportation proceedings?":  
+    "You have the right to a lawyer (at no cost to the government) and the right to see evidence against you. Attend all court dates—missing one can result in deportation.",
+    "what if i am a green card holder accused of a crime?":  
+    "Consult an immigration lawyer before accepting any plea deal—some convictions can lead to deportation, even for lawful permanent residents.",
+    "what if ice arrests a family member?":  
+    "Find out where they are being held (use ICE’s detainee locator). Contact a lawyer immediately. Do not discuss their case over jail phones—calls may be recorded.",
+    "can i record encounters with police or immigration officers?":  
+    "Yes, if you are in a public space and not interfering. In some states, you must inform officers you are recording. Check local laws.",
+    "what if i am a tourist and questioned by immigration?":  
+    "Show your passport and visa. You must answer basic questions about your visit, but you can remain silent beyond that. Ask for your consulate if detained."
 }

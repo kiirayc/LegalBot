@@ -9,13 +9,48 @@ with open('data/legal_qa.json') as f:
     LEGAL_QA = json.load(f)
 
 SYNONYMS = {
-    "officer": ["cop", "police"],
-    "police": ["cop", "officer"],
-    "immigration": ["ice", "border patrol"],
-    "stopped": ["pulled over", "detained", "held up"],
-    "document": ["papers", "id", "identification"],
-    "rights": ["legal rights", "protections"],
-    "citizen": ["citizenship"]
+    # People/Authorities  
+    "officer": ["cop", "police", "law enforcement", "agent"],  
+    "police": ["cop", "officer", "law enforcement"],  
+    "immigration": ["ice", "border patrol", "cbp", "homeland security"],  
+    "ice": ["immigration", "border patrol", "enforcement"],  
+    "border patrol": ["cbp", "immigration", "ice"],  
+
+    # Actions  
+    "stopped": ["pulled over", "detained", "held up", "questioned"],  
+    "arrested": ["detained", "taken into custody"],  
+    "search": ["inspect", "look through", "examine"],  
+    "knock": ["visit", "come to the door"],  
+
+    # Documents  
+    "document": ["papers", "id", "identification", "proof"],  
+    "passport": ["travel document"],  
+    "green card": ["permanent resident card", "lpr card"],  
+    "work permit": ["employment authorization", "ead"],  
+    "visa": ["entry permit", "travel visa"],  
+
+    # Legal Terms  
+    "rights": ["legal rights", "protections", "entitlements"],  
+    "warrant": ["court order", "judge's permission"],  
+    "lawyer": ["attorney", "legal help", "counsel"],  
+    "deportation": ["removal", "expulsion"],  
+    "detained": ["held", "in custody"],  
+
+    # Status  
+    "citizen": ["citizenship", "american citizen"],  
+    "undocumented": ["unauthorized", "without papers"],  
+    "daca": ["deferred action", "dreamer"],  
+    "legal status": ["lawful presence", "authorized stay"],  
+
+    # Locations  
+    "airport": ["customs", "port of entry"],  
+    "border": ["checkpoint", "port of entry"],  
+    "court": ["immigration court", "judge"],  
+
+    # Misc  
+    "consent": ["permission", "agreement"],  
+    "remain silent": ["don't speak", "refuse to answer"],  
+    "witness": ["see", "observe", "watch"]
 }
 
 def apply_synonyms(text):
@@ -28,6 +63,7 @@ def apply_synonyms(text):
 
 def normalize_input(text):
     text = text.lower().strip()
+    # \w: Matches any word character, \s: Matches any whitespace
     text = re.sub(r'[^\w\s]', '', text) # remove punctuation
     text = re.sub(r'\s+', ' ', text)
     text = apply_synonyms(text) # apply synonym replacement
@@ -49,7 +85,7 @@ def ask():
     print(f"User asked: {normalized_question}")
     print(f"Top match: {best_match} (Score: {score})")
 
-    if score > 85:
+    if score > 80:
         answer = LEGAL_QA[best_match]
     else:
         answer = "Sorry, I don't have an answer for that."
