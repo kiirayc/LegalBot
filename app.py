@@ -10,11 +10,8 @@ with open('data/legal_qa.json') as f:
 
 SYNONYMS = {
     # People/Authorities  
-    "officer": ["cop", "police", "law enforcement", "agent"],  
-    "police": ["cop", "officer", "law enforcement"],  
+    "police": ["cop", "officer", "law enforcement", "agent"],  
     "immigration": ["ice", "border patrol", "cbp", "homeland security"],  
-    "ice": ["immigration", "border patrol", "enforcement"],  
-    "border patrol": ["cbp", "immigration", "ice"],  
 
     # Actions  
     "stopped": ["pulled over", "detained", "held up", "questioned"],  
