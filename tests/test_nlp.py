@@ -15,10 +15,9 @@ class TestNLP(unittest.TestCase):
     
         # Actions
         assert normalize_input("they inspected my car") == "they search my car"
-        assert normalize_input("held in custody") == "detained in custody"
+        assert normalize_input("held in custody") == "detained"
     
     def test_punctuation_normalization(self) -> None:
-        print(normalize_input("What's my right?"))
         assert normalize_input("ICE!!!") == "immigration"
         assert normalize_input("What's my right?") == "whats my rights"
         assert normalize_input("U.S. citizen") == "us citizen"

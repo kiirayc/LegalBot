@@ -16,7 +16,7 @@ SYNONYMS = {
     # Actions  
     "stopped": ["pulled over", "detained", "held up", "questioned"],  
     "arrested": ["detained", "taken into custody"],  
-    "search": ["inspect", "look through", "examine"],  
+    "search": ["inspect", "inspected", "look through", "looked through", "examine", "examined"],  
     "knock": ["visit", "come to the door"],  
 
     # Documents  
@@ -27,11 +27,11 @@ SYNONYMS = {
     "visa": ["entry permit", "travel visa"],  
 
     # Legal Terms  
-    "rights": ["legal rights", "protections", "entitlements"],  
+    "rights": ["legal rights", "protections", "entitlements", "right"],  
     "warrant": ["court order", "judge's permission"],  
     "lawyer": ["attorney", "legal help", "counsel"],  
     "deportation": ["removal", "expulsion"],  
-    "detained": ["held", "in custody"],  
+    "detained": ["held in custody"],  
 
     # Status  
     "citizen": ["citizenship", "american citizen"],  
