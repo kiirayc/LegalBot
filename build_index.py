@@ -14,7 +14,7 @@ all_docs = []
 for filename in os.listdir(data_folder):
     if filename.endswith((".pdf", ".txt")):
         filepath = os.path.join(data_folder, filename)
-        # Creates a loader to read the file
+        # Creates a loader to extract texts from the files
         loader = PyMuPDFLoader(filepath)
         # Returns a list of Document objects
         docs = loader.load() # Actually reads the file
@@ -22,6 +22,7 @@ for filename in os.listdir(data_folder):
 
 # Break documents into smaller tokens
 splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50) # Overlap is for keeping track of the chunks
+# Loops internally, break each into chunks, returns a new list
 chunks = splitter.split_documents(all_docs)
 
 # Create embeddings and vector store
