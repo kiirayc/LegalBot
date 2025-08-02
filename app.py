@@ -1,10 +1,10 @@
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
-from langchain.chat_models import ChatOpenAI
-from langchain.vectorstores import FAISS
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.vectorstores import FAISS
 # Combines a retriever (FAISS) and a language model (OpenAI)
 from langchain.chains import RetrievalQA
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 
 # Load environmental variables e.g. OPENAI_API_KEY from a .env file
 # OpenAIEmbeddings() and ChatOpenAI() automatically grab the key
@@ -17,7 +17,7 @@ app = Flask(__name__)
 embedding = OpenAIEmbeddings() # Create embeddings (a tool for vector representations of text)
 # Loads the saved FAISS database with the same embedding object
 # Loads docstore (original documents) and index_to_docstore_id
-db = FAISS.load_local("faiss_index", embedding)
+db = FAISS.load_local("faiss_index", embedding, allow_dangerous_deserialization=True)
 
 # Creates a RetrievalQA chain: Retrieves relevant documents from db using retriever,
 # Passes the documents and user questions to llm 
