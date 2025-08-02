@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, render_template, jsonify
 from dotenv import load_dotenv
 from langchain_community.chat_models import ChatOpenAI
 from langchain_community.vectorstores import FAISS
@@ -27,6 +27,10 @@ qa_chain = RetrievalQA.from_chain_type(
 )
 
 # API route to Flask app
+@app.route('/') # Route decorator that runs the function below if someone accesses the root URL
+def home():
+    return render_template('index.html')
+
 @app.route("/ask", methods=["POST"])
 def ask():
     # Provides the parsed JSON data as a Python dictionary
